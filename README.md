@@ -1,11 +1,15 @@
-# Astro + Solid.js Example
+# Astro + Solid.js + Cloudflare Example
 
+## How to recreate error?
+
+First build astro with cloudflare
 ```
-npm init astro -- --template framework-solid
+yarn build
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/framework-solid)
+Then just preview using wrangler
+```
+wrangler pages dev dist
+```
 
-This example showcases Astro working with [Solid](https://www.solidjs.com/).
-
-Write your Solid components as `.jsx` or `.tsx` files in your project.
+This will error on initial request
